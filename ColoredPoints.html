@@ -1,0 +1,73 @@
+<!-- Veronica Vasquez Hernandez -->
+<!-- vejavasq@ucsc.edu -->
+
+<!-- Notes to Grader: -->
+<!-- For 13.Awesomeness: I made a Paint Brush Rainbow Mode, 
+  where users can use a Rainbow Paint brush that goes though 
+  the colors of the rainbow. It works with all the 
+  shapes, sizes, and segments for circle. This can be 
+  turned off and the canvas will go back to its original 
+  state.
+
+  I also made sure I labeled 
+  everything (13. Awesomeness!) in the comments of my code,
+  this includes changes to code or code that is used 
+  for this this part of the assigment 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <img
+    class="drawing" width="400" height="400"
+    src="waveDraw.jpg"
+    alt="My cool wave drawing" />
+    
+    <br><br>
+    <button type="button" id="clear">Clear Canvas</button>
+    <button type="button" id="painting">Draw Wave</button>
+
+    <br><br>
+    <label>Choose your shape to draw with: </label>
+    <br><br>
+    <button type="button" id="square">Square</button>
+    <button type="button" id="triangle">Triangle</button>
+    <button type="button" id="circle">Circle</button>
+    <br><br>
+    <label>Change the color: </label>
+    <br>
+    <label> Red<input type="range"  min="0" max="100" value="100" class="slider" id="redSlider"></label>
+    <label> Green<input type="range"  min="0" max="100" value="100" class="slider" id="greenSlider"></label>
+    <label> Blue<input type="range"  min="0" max="100" value="100" class="slider" id="blueSlider"></label>
+    
+    <p> Shape Size<input type="range"  min="5" max="70" value="0" class="slider" id="sizeSlider"></p>
+    <p> (Circles) Segment Count<input type="range"  min="3" max="40" value="25" class="slider" id="circleSlider"></p>
+
+    <!-- 13. Awesomeness! -->
+    <br>
+    <label>Turn On the RAINBOW POWER ⚡🌈</label>
+    <label class="checkbox">
+      <input type="checkbox" id="rainbow"/>
+    </label>
+    <br><br>
+
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Wave.js"></script>
+
+  </body>
+</html>
